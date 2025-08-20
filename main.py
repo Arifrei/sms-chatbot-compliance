@@ -1,6 +1,10 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect
 
 app = Flask(__name__)
+
+app.route("/")
+def home():
+    return redirecrt("/sms-chatbot", code=302)
 
 @app.route("/sms-chatbot")
 def chatbot_service():
