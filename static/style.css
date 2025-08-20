@@ -1,0 +1,124 @@
+/* Scoped to policy/landing pages only */
+.policy-doc {
+  --panel-bg: var(--about-bg);
+  --panel-ring: #2e3a55;
+  --ring: 1.5px solid #2b364f;
+  --shadow: 0 8px 30px #00000040, 0 2px 8px #00000026;
+}
+
+/* Hero */
+.policy-doc .hero-shell {
+  position: relative;
+  background: radial-gradient(1200px 500px at 20% -10%, #31a3ed22, transparent 60%),
+              radial-gradient(800px 400px at 80% -20%, #00c7b220, transparent 60%);
+  border-bottom: 1px solid #1b2333;
+  padding-top: 4.5rem;
+  padding-bottom: 2.2rem;
+}
+.policy-doc .hero-shell h1 {
+  font-size: 2.6rem;
+  letter-spacing: 0.01em;
+}
+.policy-doc .hero-shell h2 {
+  opacity: 0.95;
+}
+
+/* Panels (sections) */
+.policy-doc .about-shell,
+.policy-doc .contact-shell {
+  max-width: 820px;
+  background: var(--panel-bg);
+  border: var(--ring);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  padding: 2rem 1.4rem;
+  margin: 2rem auto;
+}
+
+/* Section headings */
+.policy-doc .about-shell h2,
+.policy-doc .contact-shell h2 {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.policy-doc .about-shell h2::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent2);
+  box-shadow: 0 0 12px #31a3ed88;
+}
+
+/* Body copy */
+.policy-doc .about-shell p,
+.policy-doc .contact-shell p {
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 1.05rem;
+}
+
+/* Lists with custom bullets */
+.policy-doc .about-shell ul,
+.policy-doc .contact-shell ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.8rem 0 0.2rem;
+}
+.policy-doc .about-shell ul li,
+.policy-doc .contact-shell ul li {
+  position: relative;
+  padding-left: 1.4rem;
+  margin: 0.35rem 0;
+}
+.policy-doc .about-shell ul li::before,
+.policy-doc .contact-shell ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 10px #00c7b255;
+  transform: translateY(-50%);
+}
+
+/* Callouts (use by adding class="notice" to a section if desired) */
+.policy-doc .about-shell.notice {
+  border-color: #2b7faa;
+  background: linear-gradient(180deg, #223045, #1f2a3f);
+}
+.policy-doc .about-shell.notice p {
+  color: #d4e7fb;
+}
+
+/* Links */
+.policy-doc a {
+  color: var(--accent2);
+  text-decoration: underline;
+}
+.policy-doc a:hover { color: var(--accent); }
+
+/* Buttons (reuse your .btn styles, just tighten layout here) */
+.policy-doc .btn-group { margin-top: 0.4rem; }
+
+/* Footer */
+.policy-doc .footer {
+  border-top: 1px solid #1b2333;
+  box-shadow: none;
+  margin-top: 2.2rem;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .policy-doc .hero-shell h1 { font-size: 2.1rem; }
+  .policy-doc .about-shell, .policy-doc .contact-shell { padding: 1.2rem; }
+}

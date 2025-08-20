@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{COMPANY_NAME}} — SMS Chatbot Service</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="description" content="{{COMPANY_NAME}} provides a simple, fast SMS chatbot. Text us to start; we only reply to inbound messages." />
+</head>
+<body class="policy-doc">
+  <main class="main-content">
+    <header class="hero-shell">
+      <div class="hero-shell-inner">
+        <h1><span class="accent-text">Ari Freilich Dev</span> — SMS Chatbot</h1>
+        <h2>A fast, no-app chatbot you use by texting. You text first; we only reply.</h2>
+        <p>Start a conversation by sending a text to our number. No installs, no accounts. Standard messaging rates may apply.</p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="/privacy">View Privacy Policy</a>
+          <a class="btn btn-outline-secondary" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="about-shell" id="how-it-works">
+      <h2>How It Works</h2>
+      <p><strong>1)</strong> You initiate the conversation by texting our phone number.<br>
+         <strong>2)</strong> Our bot replies with helpful answers and follow-ups.<br>
+         <strong>3)</strong> Stop any time by replying <strong>STOP</strong>; for help, reply <strong>HELP</strong>.
+      </p>
+    </section>
+
+    <section class="about-shell" id="services">
+      <h2>What We Offer</h2>
+      <p>• Conversational Q&A over SMS<br>
+         • Simple prompts and quick answers<br>
+         • No apps, logins, or sign-ups required</p>
+    </section>
+
+    <section class="about-shell" id="compliance">
+      <h2>Messaging Disclosures</h2>
+      <p>Message frequency varies. Message &amp; data rates may apply. Reply <strong>STOP</strong> to opt-out at any time; reply <strong>HELP</strong> for help.</p>
+      <p>We do not initiate contact. All messaging is in direct response to user-initiated texts. See the <a href="/privacy">Privacy Policy</a> for details.</p>
+    </section>
+
+    <section class="contact-shell" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:{{CONTACT_EMAIL}}">ari@arifreilichdev.com</a><br>
+      <p>Business information and updates can be found on this website.</p>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> {{COMPANY_NAME}} · <a href="/privacy">Privacy</a>
+    </footer>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy — Ari Freilich Dev SMS Chatbot</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta name="description" content="Privacy Policy for Ari Dev SMS chatbot." />
+</head>
+<body class="policy-doc">
+  <main class="main-content">
+    <header class="hero-shell">
+      <div class="hero-shell-inner">
+        <h1>Privacy Policy</h1>
+        <p>Last updated: <span id="last-updated">2025-08-19</span></p>
+      </div>
+    </header>
+
+    <section class="about-shell">
+      <h2>Overview</h2>
+      <p>Ari Freilich Dev respects your privacy. This policy explains what we collect and how we use it for our SMS chatbot.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>What We Collect</h2>
+      <p><strong>Phone Number Only.</strong> We collect your phone number when you text our service. We do not collect names, emails, or other personal data through the chatbot.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>How We Use Your Number</h2>
+      <p>We use your phone number solely to send replies related to your conversation with the chatbot.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>No Unsolicited Messages (User-Initiated Only)</h2>
+      <p>We never initiate contact. You opt in by texting us first. All subsequent messages are direct responses or follow-ups to your inquiry.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>Sharing &amp; Selling</h2>
+      <p>We do not sell, rent, or share your phone number with third parties. We may disclose information if required by law or to protect our rights.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>Opt-Out &amp; Help</h2>
+      <p>Reply <strong>STOP</strong> to stop receiving messages at any time. Reply <strong>HELP</strong> for help. Message frequency varies. Message &amp; data rates may apply.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>Retention</h2>
+      <p>We retain your number only as long as necessary to operate the chatbot and comply with legal obligations. When no longer needed, it is deleted or anonymized.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>Security</h2>
+      <p>We use reasonable safeguards to protect information. No method of transmission or storage is 100% secure.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>Children’s Privacy</h2>
+      <p>Our service is not directed to children under 13, and we do not knowingly collect information from them.</p>
+    </section>
+
+    <section class="about-shell">
+      <h2>Changes</h2>
+      <p>We may update this policy from time to time. The “Last updated” date reflects the most recent changes.</p>
+    </section>
+
+    <section class="contact-shell" id="contact">
+      <h2>Contact Us</h2>
+      <p>If you have questions about this policy, contact us at
+        <a href="mailto:{{CONTACT_EMAIL}}">{{CONTACT_EMAIL}}</a> or call
+        <a href="tel:{{CONTACT_PHONE}}">{{CONTACT_PHONE}}</a>.
+      </p>
+    </section>
+
+    <footer class="footer">
+      © <span id="year"></span> {{COMPANY_NAME}} · <a href="/privacy">Privacy</a>
+    </footer>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
